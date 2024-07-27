@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="green-text">Welcome to Inventory Management System</h1>
+        </header>
+        <div class="main-image">
+            <img src="{{ url_for('static', filename='your-image.jpg') }}" alt="Inventory Image">
+        </div>
+        <div class="get-started">
+            <h2>Get Started</h2>
+            <a href="{{ url_for('register') }}" class="btn">Register</a>
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </div>
+        <div class="introduction">
+            <h2>About This System</h2>
+            <p>This inventory management system is designed to help you keep track of your items efficiently. With features like adding, updating, and deleting items, you can manage your inventory with ease. The system also allows you to track the quantity and price of each item, providing a comprehensive overview of your inventory.</p>
+            <ul>
+                <li>Easy to use</li>
+                <li>Track item quantity</li>
+                <li>Manage item prices</li>
+                <li>Efficient inventory management</li>
+            </ul>
+        </div>
+        <div class="creator-details">
+            <h2>Creator Details</h2>
+            <p><strong>Name:</strong> [Your Name]</p>
+            <p><strong>Contact:</strong> [Your Contact Details]</p>
+        </div>
+    </div>
+</body>
+</html>

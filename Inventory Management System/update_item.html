@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Update Item</h1>
+        </header>
+        <form action="{{ url_for('update_item', item_id=item.id) }}" method="post">
+            <label for="name">Item Name:</label>
+            <input type="text" id="name" name="name" value="{{ item.name }}" required>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="{{ item.quantity }}" required>
+            
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" value="{{ item.price }}" required>
+            
+            <button type="submit" class="btn">Update Item</button>
+        </form>
+    </div>
+</body>
+</html>
